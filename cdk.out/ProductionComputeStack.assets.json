@@ -1,0 +1,20 @@
+{
+  "version": "54.0.0",
+  "files": {
+    "d2dc46acd29f076146b511f6884f91094245c0383ffb92a31ad4afb0838fbe81": {
+      "displayName": "ProductionComputeStack Template",
+      "source": {
+        "path": "ProductionComputeStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region-0e7b363e": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "d2dc46acd29f076146b511f6884f91094245c0383ffb92a31ad4afb0838fbe81.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

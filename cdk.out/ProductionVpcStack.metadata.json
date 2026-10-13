@@ -1,0 +1,535 @@
+{
+  "/ProductionVpcStack": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "aws:cdk:acknowledged-rules",
+      "data": {
+        "CloudFormation-Validate::W3010": "Literal AZs in template are the result of accessing stack.availabilityZones, this is expected and safe"
+      },
+      "trace": [
+        "    ...aws-cdk-lib, jsii runtime...",
+        "    (no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpc25472B74"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/IGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcIGWE32DC93C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/VPCGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcVPCGW781F77FA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/CDKMetadata/Condition": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadataAvailable"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/Exports/Output{\"Ref\":\"ProductionVpcPublicSubnet1SubnetD1B80133\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProductionVpcPublicSubnet1SubnetD1B80133C3F9370F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/Exports/Output{\"Ref\":\"ProductionVpcPublicSubnet2Subnet95C9DA55\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProductionVpcPublicSubnet2Subnet95C9DA5554543D41"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/Exports/Output{\"Ref\":\"ProductionVpc25472B74\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProductionVpc25472B7456C06CF2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/Exports/Output{\"Ref\":\"ProductionVpcPrivateAppSubnet1Subnet6C053743\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProductionVpcPrivateAppSubnet1Subnet6C053743E959BF4A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/Exports/Output{\"Ref\":\"ProductionVpcPrivateAppSubnet2Subnet82B3BD3C\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProductionVpcPrivateAppSubnet2Subnet82B3BD3CD6E75870"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/Exports/Output{\"Ref\":\"ProductionVpcIsolatedDataSubnet1SubnetCCDCE46E\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProductionVpcIsolatedDataSubnet1SubnetCCDCE46E3FDB5564"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/Exports/Output{\"Ref\":\"ProductionVpcIsolatedDataSubnet2Subnet95433A91\"}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExportsOutputRefProductionVpcIsolatedDataSubnet2Subnet95433A914FF07383"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet1SubnetD1B80133"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:287 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet1RouteTable81C7E19A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:287 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet1RouteTableAssociationE3A3CB62"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:287 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet1/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet1DefaultRouteB2D4E6E0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:225 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib, jsii runtime..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet1/EIP": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet1EIP209BC6A5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet1/NATGateway": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet1NATGatewayF22A3A53"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet2Subnet95C9DA55"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:287 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet2RouteTableC728B98C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:287 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet2RouteTableAssociationA4E94588"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:287 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PublicSubnet2/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPublicSubnet2DefaultRoute352EA01E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:225 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib, jsii runtime..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet1Subnet6C053743"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:289 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet1RouteTable6DBE3DE3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:289 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet1RouteTableAssociation6BC5EB6F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:289 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet1/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet1DefaultRouteB452E452"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet2Subnet82B3BD3C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:289 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet2RouteTableB2058327"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:289 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet2RouteTableAssociationC558CAF4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:289 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/PrivateAppSubnet2/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcPrivateAppSubnet2DefaultRoute64D0DEE6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/IsolatedDataSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcIsolatedDataSubnet1SubnetCCDCE46E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/IsolatedDataSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcIsolatedDataSubnet1RouteTable261C6D90"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/IsolatedDataSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcIsolatedDataSubnet1RouteTableAssociation6FFDC281"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/IsolatedDataSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcIsolatedDataSubnet2Subnet95433A91"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/IsolatedDataSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcIsolatedDataSubnet2RouteTable2185A1D0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/ProductionVpcStack/ProductionVpc/IsolatedDataSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ProductionVpcIsolatedDataSubnet2RouteTableAssociation5393AEF4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\DENGSA~1\\AppData\\Local\\Temp\\jsii-kernel-VGVqUN\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ]
+}
