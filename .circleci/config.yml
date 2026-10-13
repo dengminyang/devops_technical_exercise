@@ -1,0 +1,52 @@
+version: 2.1
+
+jobs:
+  lint:
+    docker:
+      - image: cimg/python:3.12
+    steps:
+      - checkout
+      - run:
+          name: Install lint dependency
+          command: pip install -r requirements.txt
+      - run:
+          name: Lint Python source with Ruff
+          command: ruff check cdk_app.py infra app tests
+
+  synth:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - checkout
+      - run:
+          name: Verify Python and Docker
+          command: |
+            python3 --version
+            docker version
+      - run:
+          name: Install Node.js and AWS CDK CLI
+          command: |
+            nvm install 20
+            nvm use 20
+            npm install --global aws-cdk@2
+            cdk --version
+      - run:
+          name: Install Python dependencies
+          command: |
+            python3 -m pip install --upgrade pip
+            python3 -m pip install -r requirements.txt
+            python3 -m pip install -r app/requirements.txt
+      - run:
+          name: Synthesize CloudFormation templates
+          command: cdk synth
+
+workflows:
+  validate:
+    jobs:
+      - lint
+      - synth:
+          requires:
+            - lint
+          filters:
+            branches:
+              only: main
