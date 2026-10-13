@@ -11,15 +11,11 @@ app = cdk.App()
 vpc_stack = VpcStack(app, "ProductionVpcStack")
 
 # 2. Deploy the Compute Stack (ECS + ALB), passing the shared VPC reference
-compute_stack = ComputeStack(
-    app, "ProductionComputeStack",
-    vpc=vpc_stack.vpc
-)
+compute_stack = ComputeStack(app, "ProductionComputeStack", vpc=vpc_stack.vpc)
 
 # 3. Deploy the Data & Storage Stack (RDS Postgres + S3), passing the shared VPC reference
 data_storage_stack = DataStorageStack(
-    app, "ProductionDataStorageStack",
-    vpc=vpc_stack.vpc
+    app, "ProductionDataStorageStack", vpc=vpc_stack.vpc
 )
 
 app.synth()

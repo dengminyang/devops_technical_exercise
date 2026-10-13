@@ -7,14 +7,17 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-class DataStorageStack(Stack):
 
-    def __init__(self, scope: Construct, construct_id: str, vpc: ec2.IVpc, **kwargs) -> None:
+class DataStorageStack(Stack):
+    def __init__(
+        self, scope: Construct, construct_id: str, vpc: ec2.IVpc, **kwargs
+    ) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
         # 1. PostgreSQL Database via Amazon RDS (placed in Isolated Subnets)
         self.database = rds.DatabaseInstance(
-            self, "PostgresDatabase",
+            self,
+            "PostgresDatabase",
             engine=rds.DatabaseInstanceEngine.postgres(
                 version=rds.PostgresEngineVersion.VER_15
             ),
@@ -30,12 +33,13 @@ class DataStorageStack(Stack):
             allocated_storage=20,
             max_allocated_storage=50,
             deletion_protection=False,  # Set to True in a true production environment
-            removal_policy=RemovalPolicy.DESTROY  # Allows easy cleanup during testing
+            removal_policy=RemovalPolicy.DESTROY,  # Allows easy cleanup during testing
         )
 
         # 2. S3 Bucket with Secure Access Controls
         self.secure_bucket = s3.Bucket(
-            self, "SecureAppStorage",
+            self,
+            "SecureAppStorage",
             # Encrypt objects using S3-managed keys by default
             encryption=s3.BucketEncryption.S3_MANAGED,
             # Completely block public access (prevents accidental public exposure)
@@ -43,5 +47,5 @@ class DataStorageStack(Stack):
             # Enforce TLS/HTTPS for all incoming data transfers
             enforce_ssl=True,
             removal_policy=RemovalPolicy.DESTROY,
-            auto_delete_objects=True  # Convenient for testing teardowns
+            auto_delete_objects=True,  # Convenient for testing teardowns
         )
