@@ -1,90 +1,52 @@
 version: 2.1
 
+executors:
+  python-node-executor:
+    docker:
+      - image: cimg/python:3.11-node
+    working_directory: ~/project
+
 jobs:
   lint:
-    docker:
-      - image: cimg/python:3.12
+    executor: python-node-executor
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            data-{{ checksum "requirements.txt" }}
       - run:
-          name: Install lint dependency
-          command: pip install -r requirements.txt
+          name: Install Dependencies
+          command: |
+            python -m venv .venv
+            .venv/bin/pip install --upgrade pip
+            .venv/bin/pip install -r requirements.txt
+            .venv/bin/pip install ruff
       - run:
-          name: Lint Python source with Ruff
-          command: ruff check cdk_app.py infra app tests
+          name: Run Python Linter (Ruff)
+          command: |
+            .venv/bin/ruff check .
 
   synth:
-    machine:
-      image: ubuntu-2204:current
+    executor: python-node-executor
     steps:
       - checkout
       - run:
-          name: Verify Python and Docker
+          name: Install Node.js CDK CLI & Python Dependencies
           command: |
-            python3 --version
-            docker version
+            sudo npm install -g aws-cdk
+            python -m venv .venv
+            .venv/bin/pip install --upgrade pip
+            .venv/bin/pip install -r requirements.txt
       - run:
-          name: Install Node.js and AWS CDK CLI
+          name: Run AWS CDK Synthesis
           command: |
-            nvm install 20
-            nvm use 20
-            npm install --global aws-cdk@2
-            cdk --version
-      - run:
-          name: Install Python dependencies
-          command: |
-            python3 -m pip install --upgrade pip
-            python3 -m pip install -r requirements.txt
-            python3 -m pip install -r app/requirements.txt
-      - run:
-          name: Synthesize CloudFormation templates
-          command: cdk synth
-
-from aws_cdk import (
-    Stack,
-    aws_ec2 as ec2,
-)
-from constructs import Construct
-
-class VpcStack(Stack):
-
-    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
-        super().__init__(scope, construct_id, **kwargs)
-
-        # Define the VPC with public, private, and isolated subnets
-        self.vpc = ec2.Vpc(
-            self, "ProductionVpc",
-            ip_addresses=ec2.IpAddresses.cidr("10.0.0.0/16"),
-            max_azs=2,  # Span across 2 Availability Zones for high availability
-            subnet_configuration=[
-                ec2.SubnetConfiguration(
-                    name="Public",
-                    subnet_type=ec2.SubnetType.PUBLIC,
-                    cidr_mask=24
-                ),
-                ec2.SubnetConfiguration(
-                    name="PrivateApp",
-                    subnet_type=ec2.SubnetType.PRIVATE_WITH_EGRESS,
-                    cidr_mask=24
-                ),
-                ec2.SubnetConfiguration(
-                    name="IsolatedData",
-                    subnet_type=ec2.SubnetType.PRIVATE_ISOLATED,
-                    cidr_mask=24
-                )
-            ],
-            # Cost-conscious choice: 1 NAT Gateway instead of 1 per AZ 
-            # to avoid unnecessary hourly charges while still providing egress.
-            nat_gateways=1
-        )
+            .venv/bin/activate
+            cdk synth
 
 workflows:
-  validate:
+  validate-infrastructure:
     jobs:
       - lint
       - synth:
           requires:
             - lint
-          filters:
-            branches:
-              only: main
